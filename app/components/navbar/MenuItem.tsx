@@ -1,8 +1,16 @@
-import React from 'react'
+"use client"
+interface MenuItemProps {
+  onClick : () => void;
+  label : string
+}
 
-const MenuItem = () => {
+const MenuItem = ({onClick, label} : MenuItemProps) => {
   return (
-    <div>MenuItem</div>
+    <div className="px-4 py-3 hover:bg-neutral-100 font-semibold" onClick={onClick}>
+      {
+        label
+      }
+    </div>
   )
 }
 
